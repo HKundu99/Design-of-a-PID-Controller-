@@ -1,0 +1,151 @@
+
+**** 09/08/22 17:56:47 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\HP\Desktop\208 project\Schematic1.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Thu Sep 08 17:56:43 2022
+
+
+
+** Analysis setup **
+.tran 0.01u 5m 0 1u
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "Schematic1.net"
+
+
+
+**** INCLUDING Schematic1.net ****
+* Schematics Netlist *
+
+
+
+V_V1         0 $N_0001 16
+V_V2         $N_0002 0 16
+X_U1         $N_0003 Vin $N_0002 $N_0001 Vout uA741
+V_V4         $N_0006 0 11.4286V
+V_V5         Vin 0  
++SIN 0 20 1000 0 0 0
+R_R1         Vout $N_0003  70k  
+R_R2         $N_0003 $N_0006  10k  
+
+**** RESUMING Schematic1.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 09/08/22 17:56:47 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\HP\Desktop\208 project\Schematic1.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 09/08/22 17:56:47 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\HP\Desktop\208 project\Schematic1.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 09/08/22 17:56:47 ********* PSpice 9.2 (Mar 2000) ******** ID# 0 ********
+
+ * C:\Users\HP\Desktop\208 project\Schematic1.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  Vin)    0.0000  ( Vout)   15.8160  (X_U1.6)   -1.5782 (X_U1.7)   17.8470     
+
+(X_U1.8)   17.8470 (X_U1.9)    0.0000 ($N_0001)  -16.0000                       
+
+($N_0002)   16.0000                   ($N_0003)   11.9760                       
+
+($N_0006)   11.4290                   (X_U1.10)   11.3330                       
+
+(X_U1.11)   16.0000                   (X_U1.12)   15.9160                       
+
+(X_U1.13)   11.3330                   (X_U1.14)   11.3620                       
+
+(X_U1.53)   15.0000                   (X_U1.54)  -15.0000                       
+
+(X_U1.90)   40.6070                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.777E-03
+    V_V2         3.877E-02
+    V_V4         5.470E-05
+    V_V5         1.612E-11
+    X_U1.vb     -1.578E-05
+    X_U1.vc     -4.055E-02
+    X_U1.ve      3.274E-11
+    X_U1.vlim    4.061E-02
+    X_U1.vlp     1.267E-05
+    X_U1.vln    -8.061E-11
+
+    TOTAL POWER DISSIPATION  -5.53E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .20
+

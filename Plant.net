@@ -1,0 +1,10 @@
+* Schematics Netlist *
+
+
+
+C_C1         $N_0001 0  1u  
+C_C2         $N_0002 0  1u  
+R_R1         $N_0003 $N_0001  10k  
+R_R2         $N_0001 $N_0002  10k  
+V_V3         $N_0003 0  
++PULSE 0 1 0.5m 1n 1n 500m 1000m

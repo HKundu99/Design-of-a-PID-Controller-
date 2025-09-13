@@ -1,0 +1,23 @@
+* C:\Users\HP\Desktop\208 project\proportional.sch
+
+* Schematics Version 9.2
+* Sun Aug 28 04:31:14 2022
+
+
+.PARAM         RVAR=1k 
+
+** Analysis setup **
+.tran 100u 50m 0 100u
+.STEP LIN PARAM RVAR 1k 10k 2k 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "proportional.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

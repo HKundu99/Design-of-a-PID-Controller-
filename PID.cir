@@ -1,0 +1,21 @@
+* C:\Users\HP\Desktop\208 project\PID.sch
+
+* Schematics Version 9.2
+* Sun Aug 28 11:14:31 2022
+
+
+
+** Analysis setup **
+.tran 100u 400m 0 100u
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "PID.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

@@ -1,0 +1,32 @@
+* Schematics Netlist *
+
+
+
+V_V4         POS 0 20V
+V_V5         0 NEG 20V
+C_C2         $N_0001 $N_0002  1u  
+X_U3         0 $N_0001 POS NEG $N_0002 uA741
+X_U2         0 $N_0005 POS NEG $N_0006 uA741
+R_R9         $N_0010 $N_0009  10k  
+X_U4         0 $N_0010 POS NEG $N_0009 uA741
+R_R10         $N_0009 $N_0013  10k  
+R_R11         $N_0013 output  10k  
+C_C4         output 0  1u  
+C_C3         $N_0013 0  1u  
+X_U1         0 $N_0014 POS NEG $N_0015 uA741
+R_R2         ERROR $N_0014  1k  
+R_R1         $N_0014 $N_0015  1k  
+R_R5         ERROR $N_0001  100k  
+R_R4         $N_0018 $N_0005  200  
+C_C1         ERROR $N_0018  0.1u  
+R_R3         $N_0005 $N_0006  10k  
+R_R26         $N_0020 $N_0019  10k  
+R_R27         output $N_0021  10k  
+R_R28         $N_0019 0  10k  
+X_U8         $N_0019 $N_0021 POS NEG ERROR uA741
+V_Set_point         $N_0020 0  
++PULSE 0 1 10m 1n 1n 100m 200m
+R_R29         $N_0021 ERROR  10k  
+R_R8         $N_0002 $N_0010  100  
+R_R7         $N_0006 $N_0010  100  
+R_R6         $N_0015 $N_0010  100  

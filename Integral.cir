@@ -1,0 +1,23 @@
+* C:\Users\HP\Desktop\208 project\Integral.sch
+
+* Schematics Version 9.2
+* Sun Aug 28 04:02:42 2022
+
+
+.PARAM         RVAR=100k 
+
+** Analysis setup **
+.tran 100u 50m 0 100u
+.STEP LIN PARAM RVAR 60k 100k 10k 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "Integral.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
